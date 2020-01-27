@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+C:\Users\Everli\Desktop\Udemy\ws-eclipse\.metadata\.plugins\org.eclipse.jdt.core
+2168687353.index
+271159951.index
+811147442.index
+1818320769.index
+3527207673.index
+806035909.index

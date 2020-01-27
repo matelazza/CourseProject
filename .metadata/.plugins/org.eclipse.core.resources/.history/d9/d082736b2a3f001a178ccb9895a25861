@@ -1,0 +1,44 @@
+package application;
+
+import java.util.Scanner;
+
+public class Fixacao {
+	public static void main(String[] args) {
+		// Read 2 Integer Numbers, M lines, N rows
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("M:");
+		int m = sc.nextInt();
+		System.out.println("N:");
+		int n = sc.nextInt();
+		// Do a matrix with M and N.
+		int[][] mat = new int[m][n];
+		/// Read input
+		for (int i = 0; i < mat.length; i++) {
+			for (int j = 0; j < n; j++) {
+				mat[i][j] = sc.nextInt();
+			}
+		}
+		// Read a number X in the matrix
+		System.out.println("Enter a number for x, that is contained in the matrix:");
+		int x = sc.nextInt();
+
+		// For each occurrence of X, show the values in adjacent position, left, right,
+		// up, down.
+		for (int i = 0; i < mat.length; i++) {
+			for (int j = 0; j < n; j++) {
+				if (x == mat[i][j]) {
+					System.out.printf("Position %d,%d\n", i, j);
+					if( i > 0) {
+						System.out.println("Up: " + mat[i-1][j]);
+					}
+					System.out.println("Left: " + mat[i][j - 1]);
+					System.out.println("Right: " + mat[i][j + 1]);
+
+					System.out.println("Down:" + mat[i+1][j]);
+				}
+			}
+			sc.close();
+		}
+	}
+}
